@@ -1,62 +1,80 @@
-import pygame
-from random import choice
+import pygame as pg
 
-x_pos = 0
-y_pos = 0
+pg.init()
+screen = pg.display.set_mode((640, 480))
+COLOR_INACTIVE = pg.Color('lightskyblue3')
+COLOR_ACTIVE = pg.Color('dodgerblue2')
+FONT = pg.font.Font(None, 32)
 
-x_pos_2 = 800
-y_pos_2 = 0
 
+class InputBox:
 
-def draw(screen):
-    global x_pos, y_pos, x_pos_2, y_pos_2
-    screen.fill((0, 0, 0))
+    def __init__(self, x, y, w, h, text=''):
+        self.rect = pg.Rect(x, y, w, h)
+        self.color = COLOR_INACTIVE
+        self.text = text
+        self.txt_surface = FONT.render(text, True, self.color)
+        self.active = False
 
-    for i in range(8):
-        color = (choice(range(255)), choice(range(255)), choice(range(255)))
-        pygame.draw.circle(screen, color, (x_pos % 800, y_pos % 800), 20)
-        x_pos += choice(range(300))
-        y_pos += choice(range(300))
+    def handle_event(self, event):
+        if event.type == pg.MOUSEBUTTONDOWN:
+            # If the user clicked on the input_box rect.
+            if self.rect.collidepoint(event.pos):
+                # Toggle the active variable.
+                self.active = not self.active
+            else:
+                self.active = False
+            # Change the current color of the input box.
+            self.color = COLOR_ACTIVE if self.active else COLOR_INACTIVE
+        if event.type == pg.KEYDOWN:
+            if self.active:
+                if event.key == pg.K_RETURN:
+                    print(self.text)
+                    self.text = ''
+                elif event.key == pg.K_BACKSPACE:
+                    self.text = self.text[:-1]
+                else:
+                    self.text += event.unicode
+                # Re-render the text.
+                self.txt_surface = FONT.render(self.text, True, self.color)
 
-    for i in range(8):
-        color = (choice(range(255)), choice(range(255)), choice(range(255)))
-        pygame.draw.circle(screen, color, (x_pos_2 % 800, y_pos_2 % 800), 20)
-        x_pos_2 -= choice(range(300))
-        y_pos_2 += choice(range(300))
+    def update(self):
+        # Resize the box if the text is too long.
+        width = max(200, self.txt_surface.get_width() + 10)
+        self.rect.w = width
+
+    def draw(self, screen):
+        # Blit the text.
+        screen.blit(self.txt_surface, (self.rect.x + 5, self.rect.y + 5))
+        # Blit the rect.
+        pg.draw.rect(screen, self.color, self.rect, 2)
 
 
 def main():
-    global x_pos, y_pos, x_pos_2, y_pos_2
-    pygame.init()
-    pygame.display.set_caption('New Application')
-    size = (800, 800)
-    screen = pygame.display.set_mode(size)
-    v = 30
-    fps = 60
-    clock = pygame.time.Clock()
-    active = True
-    while active:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                active = False
-            '''elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
-                    x_pos -= 5
-                elif event.key == pygame.K_RIGHT:
-                    x_pos += 5
-                elif event.key == pygame.K_UP:
-                    y_pos -= 5
-                elif event.key == pygame.K_DOWN:
-                    y_pos += 5'''
-        draw(screen)
-        x_pos += v / fps
-        y_pos += v / fps
-        x_pos_2 -= v / fps
-        y_pos_2 += v / fps
-        clock.tick(fps)
-        pygame.display.flip()
-    pygame.quit()
+    clock = pg.time.Clock()
+    input_box1 = InputBox(100, 100, 140, 32)
+    input_box2 = InputBox(100, 300, 140, 32)
+    input_boxes = [input_box1, input_box2]
+    done = False
+
+    while not done:
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                done = True
+            for box in input_boxes:
+                box.handle_event(event)
+
+        for box in input_boxes:
+            box.update()
+
+        screen.fill((30, 30, 30))
+        for box in input_boxes:
+            box.draw(screen)
+
+        pg.display.flip()
+        clock.tick(30)
 
 
 if __name__ == '__main__':
     main()
+    pg.quit()
