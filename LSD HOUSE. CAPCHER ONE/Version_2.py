@@ -1,5 +1,4 @@
 import pygame
-import pygame_gui
 from random import choice
 
 # Функция градиента
