@@ -1,20 +1,17 @@
 import pygame
 from random import choice
 
-x_pos = 0
-y_pos = 0
-
 
 def lsd_corridor(screen):
     screen.fill((0, 0, 0))
     font = pygame.font.Font("BAUHS93.TTF", 50)
-    text = font.render("Welcome to the LSD house!", True, (184, 13, 147))
+    text = font.render("Welcome to the LSD house!", True, (240, 95, 12))
     text_x = width // 2 - text.get_width() // 2
     text_y = height // 2 - text.get_height() // 2
     text_w = text.get_width()
     text_h = text.get_height()
     screen.blit(text, (text_x, text_y - 50))
-    pygame.draw.rect(screen, (184, 13, 147), (text_x - 10, text_y - 60,
+    pygame.draw.rect(screen, (240, 95, 12), (text_x - 10, text_y - 60,
                                            text_w + 20, text_h + 20), 1)
 
 
@@ -47,13 +44,13 @@ def lsd_room_2(screen):
 def lsd_room_3(screen):
     screen.fill((0, 0, 0))
     font = pygame.font.Font("BAUHS93.TTF", 48)
-    text = font.render("Loading LSD room 3, please wait...", True, (227, 156, 14))
+    text = font.render("Loading LSD room 3, please wait...", True, (127, 138, 11))
     text_x = width // 2 - text.get_width() // 2
     text_y = height // 2 - text.get_height() // 2
     text_w = text.get_width()
     text_h = text.get_height()
     screen.blit(text, (text_x, text_y - 50))
-    pygame.draw.rect(screen, (227, 156, 14), (text_x - 10, text_y - 60,
+    pygame.draw.rect(screen, (127, 138, 11), (text_x - 10, text_y - 60,
                                            text_w + 20, text_h + 20), 1)
 
 
