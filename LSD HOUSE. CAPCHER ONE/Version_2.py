@@ -11,114 +11,110 @@ from random import choice
     window.blit(colour_rect, target_rect)  # paint it'''
 
 
-def lsd_corridor(screen):
-    screen.fill((0, 0, 0))
+class Main:
+    def __init__(self):
+        pygame.init()
+        pygame.display.set_caption('LSD/Sweet house')
+        self.size = self.width, self.height = 800, 800
+        self.screen = pygame.display.set_mode(self.size)
+        self.fps = 7
+        self.clock = pygame.time.Clock()
 
-    # gradientRect(screen, (0, 0, 0), (255, 255, 255), pygame.Rect(20, 20, 500, 500))
+    def lsd_corridor(self):
+        self.screen.fill((0, 0, 0))
 
-    font = pygame.font.Font("BAUHS93.TTF", 50)
-    text = font.render("Welcome to the LSD house!", True,
-                       (choice(range(255)), choice(range(255)), choice(range(255))))
-    text_x = width // 2 - text.get_width() // 2
-    text_y = height // 2 - text.get_height() // 2
-    text_w = text.get_width()
-    text_h = text.get_height()
-    screen.blit(text, (text_x, text_y - 50))
-    pygame.draw.rect(screen, (choice(range(255)), choice(range(255)), choice(range(255))),
-                     (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
+        font = pygame.font.Font("BAUHS93.TTF", 50)
+        text = font.render("Welcome to the LSD house!", True,
+                           (choice(range(255)), choice(range(255)), choice(range(255))))
+        text_x = self.width // 2 - text.get_width() // 2
+        text_y = self.height // 2 - text.get_height() // 2
+        text_w = text.get_width()
+        text_h = text.get_height()
+        self.screen.blit(text, (text_x, text_y - 50))
+        pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
 
+    def lsd_room_1(self):
+        self.screen.fill((0, 0, 0))
+        font = pygame.font.Font("BAUHS93.TTF", 48)
+        text = font.render("Loading LSD room 1, please wait...", True,
+                           (choice(range(255)), choice(range(255)), choice(range(255))))
+        text_x = self.width // 2 - text.get_width() // 2
+        text_y = self.height // 2 - text.get_height() // 2
+        text_w = text.get_width()
+        text_h = text.get_height()
+        self.screen.blit(text, (text_x, text_y - 50))
+        pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
 
-def lsd_room_1(screen):
-    screen.fill((0, 0, 0))
-    font = pygame.font.Font("BAUHS93.TTF", 48)
-    text = font.render("Loading LSD room 1, please wait...", True,
-                       (choice(range(255)), choice(range(255)), choice(range(255))))
-    text_x = width // 2 - text.get_width() // 2
-    text_y = height // 2 - text.get_height() // 2
-    text_w = text.get_width()
-    text_h = text.get_height()
-    screen.blit(text, (text_x, text_y - 50))
-    pygame.draw.rect(screen, (choice(range(255)), choice(range(255)), choice(range(255))),
-                     (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
+    def lsd_room_2(self):
+        self.screen.fill((0, 0, 0))
+        font = pygame.font.Font("BAUHS93.TTF", 48)
+        text = font.render("Loading LSD room 2, please wait...", True,
+                           (choice(range(255)), choice(range(255)), choice(range(255))))
+        text_x = self.width // 2 - text.get_width() // 2
+        text_y = self.height // 2 - text.get_height() // 2
+        text_w = text.get_width()
+        text_h = text.get_height()
+        self.screen.blit(text, (text_x, text_y - 50))
+        pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
 
+    def lsd_room_3(self):
+        self.screen.fill((0, 0, 0))
+        font = pygame.font.Font("BAUHS93.TTF", 48)
+        text = font.render("Loading LSD room 3, please wait...", True,
+                           (choice(range(255)), choice(range(255)), choice(range(255))))
+        text_x = self.width // 2 - text.get_width() // 2
+        text_y = self.height // 2 - text.get_height() // 2
+        text_w = text.get_width()
+        text_h = text.get_height()
+        self.screen.blit(text, (text_x, text_y - 50))
+        pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
 
-def lsd_room_2(screen):
-    screen.fill((0, 0, 0))
-    font = pygame.font.Font("BAUHS93.TTF", 48)
-    text = font.render("Loading LSD room 2, please wait...", True,
-                       (choice(range(255)), choice(range(255)), choice(range(255))))
-    text_x = width // 2 - text.get_width() // 2
-    text_y = height // 2 - text.get_height() // 2
-    text_w = text.get_width()
-    text_h = text.get_height()
-    screen.blit(text, (text_x, text_y - 50))
-    pygame.draw.rect(screen, (choice(range(255)), choice(range(255)), choice(range(255))),
-                     (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
+    def main(self):
+        active = True
+        while active:
+            self.lsd_corridor()
+            self.clock.tick(self.fps)
+            pygame.display.flip()
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    active = False
+                elif event.type == pygame.KEYDOWN:
 
+                    if event.key == pygame.K_1:
+                        lsd_1_active = True
+                        while lsd_1_active:
+                            for event_2 in pygame.event.get():
+                                if event_2.type == pygame.QUIT:
+                                    lsd_1_active = False
+                            self.lsd_room_1()
+                            self.clock.tick(self.fps)
+                            pygame.display.flip()
 
-def lsd_room_3(screen):
-    screen.fill((0, 0, 0))
-    font = pygame.font.Font("BAUHS93.TTF", 48)
-    text = font.render("Loading LSD room 3, please wait...", True,
-                       (choice(range(255)), choice(range(255)), choice(range(255))))
-    text_x = width // 2 - text.get_width() // 2
-    text_y = height // 2 - text.get_height() // 2
-    text_w = text.get_width()
-    text_h = text.get_height()
-    screen.blit(text, (text_x, text_y - 50))
-    pygame.draw.rect(screen, (choice(range(255)), choice(range(255)), choice(range(255))),
-                     (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
+                    elif event.key == pygame.K_2:
+                        lsd_2_active = True
+                        while lsd_2_active:
+                            for event_2 in pygame.event.get():
+                                if event_2.type == pygame.QUIT:
+                                    lsd_2_active = False
+                            self.lsd_room_2()
+                            self.clock.tick(self.fps)
+                            pygame.display.flip()
 
-
-def main():
-    global width, height
-    pygame.init()
-    pygame.display.set_caption('LSD/Sweet house')
-    size = width, height = 800, 800
-    screen = pygame.display.set_mode(size)
-    fps = 8
-    clock = pygame.time.Clock()
-    active = True
-    while active:
-        lsd_corridor(screen)
-        clock.tick(fps)
-        pygame.display.flip()
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                active = False
-            elif event.type == pygame.KEYDOWN:
-
-                if event.key == pygame.K_1:
-                    lsd_1_active = True
-                    while lsd_1_active:
-                        for event_2 in pygame.event.get():
-                            if event_2.type == pygame.QUIT:
-                                lsd_1_active = False
-                        lsd_room_1(screen)
-                        clock.tick(fps)
-                        pygame.display.flip()
-
-                elif event.key == pygame.K_2:
-                    lsd_2_active = True
-                    while lsd_2_active:
-                        for event_2 in pygame.event.get():
-                            if event_2.type == pygame.QUIT:
-                                lsd_2_active = False
-                        lsd_room_2(screen)
-                        clock.tick(fps)
-                        pygame.display.flip()
-
-                elif event.key == pygame.K_3:
-                    lsd_3_active = True
-                    while lsd_3_active:
-                        for event_2 in pygame.event.get():
-                            if event_2.type == pygame.QUIT:
-                                lsd_3_active = False
-                        lsd_room_3(screen)
-                        clock.tick(fps)
-                        pygame.display.flip()
-    pygame.quit()
+                    elif event.key == pygame.K_3:
+                        lsd_3_active = True
+                        while lsd_3_active:
+                            for event_2 in pygame.event.get():
+                                if event_2.type == pygame.QUIT:
+                                    lsd_3_active = False
+                            self.lsd_room_3()
+                            self.clock.tick(self.fps)
+                            pygame.display.flip()
+        pygame.quit()
 
 
 if __name__ == '__main__':
-    main()
+    Main().main()

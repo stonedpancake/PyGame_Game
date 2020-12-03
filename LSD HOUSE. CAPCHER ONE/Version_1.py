@@ -12,7 +12,7 @@ def lsd_corridor(screen):
     text_h = text.get_height()
     screen.blit(text, (text_x, text_y - 50))
     pygame.draw.rect(screen, (240, 95, 12), (text_x - 10, text_y - 60,
-                                           text_w + 20, text_h + 20), 1)
+                                             text_w + 20, text_h + 20), 1)
 
 
 def lsd_room_1(screen):
@@ -25,7 +25,7 @@ def lsd_room_1(screen):
     text_h = text.get_height()
     screen.blit(text, (text_x, text_y - 50))
     pygame.draw.rect(screen, (102, 24, 204), (text_x - 10, text_y - 60,
-                                           text_w + 20, text_h + 20), 1)
+                                              text_w + 20, text_h + 20), 1)
 
 
 def lsd_room_2(screen):
@@ -38,7 +38,7 @@ def lsd_room_2(screen):
     text_h = text.get_height()
     screen.blit(text, (text_x, text_y - 50))
     pygame.draw.rect(screen, (18, 39, 229), (text_x - 10, text_y - 60,
-                                           text_w + 20, text_h + 20), 1)
+                                             text_w + 20, text_h + 20), 1)
 
 
 def lsd_room_3(screen):
@@ -51,7 +51,7 @@ def lsd_room_3(screen):
     text_h = text.get_height()
     screen.blit(text, (text_x, text_y - 50))
     pygame.draw.rect(screen, (127, 138, 11), (text_x - 10, text_y - 60,
-                                           text_w + 20, text_h + 20), 1)
+                                              text_w + 20, text_h + 20), 1)
 
 
 def main():
