@@ -1,80 +1,68 @@
-import pygame as pg
-
-pg.init()
-screen = pg.display.set_mode((640, 480))
-COLOR_INACTIVE = pg.Color('lightskyblue3')
-COLOR_ACTIVE = pg.Color('dodgerblue2')
-FONT = pg.font.Font(None, 32)
+import pygame
 
 
-class InputBox:
+class Board:
+    # создание поля
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.board = [[0] * width for i in range(height)]
+        # значения по умолчанию
+        self.left = 50
+        self.top = 50
+        self.cell_size = 50
 
-    def __init__(self, x, y, w, h, text=''):
-        self.rect = pg.Rect(x, y, w, h)
-        self.color = COLOR_INACTIVE
-        self.text = text
-        self.txt_surface = FONT.render(text, True, self.color)
-        self.active = False
+    # настройка внешнего вида
+    def set_view(self, left, top, cell_size):
+        self.left = left
+        self.top = top
+        self.cell_size = cell_size
 
-    def handle_event(self, event):
-        if event.type == pg.MOUSEBUTTONDOWN:
-            # If the user clicked on the input_box rect.
-            if self.rect.collidepoint(event.pos):
-                # Toggle the active variable.
-                self.active = not self.active
-            else:
-                self.active = False
-            # Change the current color of the input box.
-            self.color = COLOR_ACTIVE if self.active else COLOR_INACTIVE
-        if event.type == pg.KEYDOWN:
-            if self.active:
-                if event.key == pg.K_RETURN:
-                    print(self.text)
-                    self.text = ''
-                elif event.key == pg.K_BACKSPACE:
-                    self.text = self.text[:-1]
+    def render(self, screen):
+        for y in range(self.height):
+            for x in range(self.width):
+                if self.board[y][x] == 0:
+                    bord_width = 1
                 else:
-                    self.text += event.unicode
-                # Re-render the text.
-                self.txt_surface = FONT.render(self.text, True, self.color)
+                    bord_width = 0
+                pygame.draw.rect(screen, pygame.Color(255, 255, 255), (
+                    x * self.cell_size + self.left,
+                    y * self.cell_size + self.top,
+                    self.cell_size, self.cell_size), bord_width)
 
-    def update(self):
-        # Resize the box if the text is too long.
-        width = max(200, self.txt_surface.get_width() + 10)
-        self.rect.w = width
+    def get_cell(self, mouse_pos):
+        cell_x = (mouse_pos[0] - self.left) // self.cell_size
+        cell_y = (mouse_pos[1] - self.top) // self.cell_size
+        if cell_x < 0 or cell_x > self.width or cell_y < 0 or cell_y > self.height:
+            return None
+        return cell_x, cell_y
 
-    def draw(self, screen):
-        # Blit the text.
-        screen.blit(self.txt_surface, (self.rect.x + 5, self.rect.y + 5))
-        # Blit the rect.
-        pg.draw.rect(screen, self.color, self.rect, 2)
+    def on_click(self, cell_coords):
+        if cell_coords is not None:
+            x, y = cell_coords
+            self.board[y][x] = (self.board[y][x] + 1) % 2
 
-
-def main():
-    clock = pg.time.Clock()
-    input_box1 = InputBox(100, 100, 140, 32)
-    input_box2 = InputBox(100, 300, 140, 32)
-    input_boxes = [input_box1, input_box2]
-    done = False
-
-    while not done:
-        for event in pg.event.get():
-            if event.type == pg.QUIT:
-                done = True
-            for box in input_boxes:
-                box.handle_event(event)
-
-        for box in input_boxes:
-            box.update()
-
-        screen.fill((30, 30, 30))
-        for box in input_boxes:
-            box.draw(screen)
-
-        pg.display.flip()
-        clock.tick(30)
+    def get_click(self, mouse_pos):
+        cell = self.get_cell(mouse_pos)
+        self.on_click(cell)
 
 
-if __name__ == '__main__':
-    main()
-    pg.quit()
+pygame.init()
+size = 500, 500
+screen = pygame.display.set_mode(size)
+# поле 5 на 7
+board = Board(5, 7)
+# board = Board(4, 3)
+# board.set_view(100, 100, 50)
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            board.get_click(event.pos)
+    screen.fill((0, 0, 0))
+    board.render(screen)
+    pygame.display.flip()
+pygame.quit()

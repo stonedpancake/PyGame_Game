@@ -1,4 +1,5 @@
 import pygame
+from pygame import camera
 from random import choice
 
 # Функция градиента
@@ -92,6 +93,11 @@ class Main:
         pygame.draw.line(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
                          (0, 750), (800, 750), 3)
 
+        pygame.time.wait(1)
+
+        pygame.draw.circle(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                           (choice(range(100, 700)), choice(range(100, 650))), choice(range(10, 60)), 2)
+
     def draw_second_level(self):
         self.screen.fill((0, 0, 0))
         pygame.draw.line(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
@@ -141,7 +147,7 @@ class Main:
                             # Вызов отрисовки 1-ого уровня
 
                             seconds = (pygame.time.get_ticks() - start_ticks) / 1000  # calculate how many seconds
-                            if seconds > 5:
+                            if seconds > 2:
                                 self.draw_first_level()
                                 pygame.display.flip()
 
@@ -165,7 +171,7 @@ class Main:
                             # Вызов отрисовки 2-ого уровня
 
                             seconds = (pygame.time.get_ticks() - start_ticks) / 1000  # calculate how many seconds
-                            if seconds > 5:  # if more than 10 seconds close the game
+                            if seconds > 2:
                                 self.draw_second_level()
                                 pygame.display.flip()
 
@@ -189,7 +195,7 @@ class Main:
                             # Вызов отрисовки 3-его уровня
 
                             seconds = (pygame.time.get_ticks() - start_ticks) / 1000  # calculate how many seconds
-                            if seconds > 5:  # if more than 10 seconds close the game
+                            if seconds > 2:
                                 self.draw_third_level()
                                 pygame.display.flip()
         pygame.quit()
