@@ -3,6 +3,8 @@ from pygame import camera, image, time
 from random import choice
 from pygame import mixer
 
+'''./Materials'''
+
 # Функция градиента
 '''def gradientRect(window, left_colour, right_colour, target_rect):
     """ Draw a horizontal-gradient filled rectangle covering <target_rect> """
@@ -18,35 +20,93 @@ class Main:
     def __init__(self):
         pygame.init()
         pygame.display.set_caption('Sweet house')
-        self.size = self.width, self.height = 800, 800
+
+        self.size = self.width, self.height = 1920, 1080
         self.screen = pygame.display.set_mode(self.size)
         self.fps = 6
         self.clock = pygame.time.Clock()
-        self.image = image.load("4-19.jpg")
+        self.image = image.load("./Materials/Bg pictures/Scary Room/4-19.jpg")
+
+        self.btn_cords_lst = []
 
     def lsd_corridor(self):
 
         self.screen.fill((0, 0, 0))
 
-        font = pygame.font.Font("BAUHS93.TTF", 50)
+        # Приветствие
+
+        font = pygame.font.Font("./Materials/Text_Fonts/BAUHS93.TTF", 48)
 
         text = font.render("Welcome to the Sweet house!", True,
+                           (choice(range(255)), choice(range(255)), choice(range(255))))
+
+        text_x_main = self.width // 2 - text.get_width() // 2
+        text_y = self.height // 2 - text.get_height() // 2
+        text_w_main = text.get_width()
+        text_h = text.get_height()
+        self.screen.blit(text, (text_x_main, text_y - 50))
+
+        pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x_main - 10, text_y - 60, text_w_main + 20, text_h + 20), 1)
+
+        # Дверь в Комнату Ужасов
+
+        text = font.render("Spooky Room", True,
                            (choice(range(255)), choice(range(255)), choice(range(255))))
 
         text_x = self.width // 2 - text.get_width() // 2
         text_y = self.height // 2 - text.get_height() // 2
         text_w = text.get_width()
         text_h = text.get_height()
-        self.screen.blit(text, (text_x, text_y - 50))
+        self.screen.blit(text, (text_x, text_y + text_h))
+
+        self.btn_cords_lst.append([range(text_h + 20, text_x - 10), range(text_h + 20, text_y + text_h - 8)])
+
+        '''pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x_main - 10, text_y + text_h - 8, text_w_main + 20, text_h + 20), 1)'''
 
         pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
-                         (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
+                         (text_x - 10, text_y + text_h - 8, text_w + 20, text_h + 20), 1)
+
+        # Дверь в Новогоднюю Комнату
+
+        text = font.render("Christmas Room", True,
+                           (choice(range(255)), choice(range(255)), choice(range(255))))
+
+        text_x = self.width // 2 - text.get_width() // 2
+        text_y = self.height // 2 - text.get_height() // 2
+        text_w = text.get_width()
+        text_h = text.get_height()
+        self.screen.blit(text, (text_x, text_y + 2 * text_h + 30))
+
+        '''pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x_main - 10, text_y + 2 * text_h + 22, text_w_main + 20, text_h + 20), 1)'''
+
+        pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x - 10, text_y + 2 * text_h + 22, text_w + 20, text_h + 20), 1)
+
+        # Дверь в Сказочную Комнату
+
+        text = font.render("Dreams Room", True,
+                           (choice(range(255)), choice(range(255)), choice(range(255))))
+
+        text_x = self.width // 2 - text.get_width() // 2
+        text_y = self.height // 2 - text.get_height() // 2
+        text_w = text.get_width()
+        text_h = text.get_height()
+        self.screen.blit(text, (text_x, text_y + 4 * text_h + 5))
+
+        '''pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x_main - 10, text_y + 4 * text_h - 5, text_w_main + 20, text_h + 20), 1)'''
+
+        pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
+                         (text_x - 10, text_y + 4 * text_h - 5, text_w + 20, text_h + 20), 1)
 
     def lsd_room_1(self):
 
         self.screen.fill((0, 0, 0))
 
-        font = pygame.font.Font("BAUHS93.TTF", 48)
+        font = pygame.font.Font("./Materials/Text_Fonts/BAUHS93.TTF", 48)
 
         text = font.render("Loading room 1, please wait...", True,
                            (choice(range(255)), choice(range(255)), choice(range(255))))
@@ -66,7 +126,7 @@ class Main:
 
         self.screen.fill((0, 0, 0))
 
-        font = pygame.font.Font("BAUHS93.TTF", 48)
+        font = pygame.font.Font("./Materials/Text_Fonts/BAUHS93.TTF", 48)
 
         text = font.render("Loading room 2, please wait...", True,
                            (choice(range(255)), choice(range(255)), choice(range(255))))
@@ -84,7 +144,7 @@ class Main:
 
         self.screen.fill((0, 0, 0))
 
-        font = pygame.font.Font("BAUHS93.TTF", 48)
+        font = pygame.font.Font("./Materials/Text_Fonts/BAUHS93.TTF", 48)
 
         text = font.render("Loading room 3, please wait...", True,
                            (choice(range(255)), choice(range(255)), choice(range(255))))
@@ -139,7 +199,7 @@ class Main:
 
                             time.delay(2000)
 
-                            Rooms().ScaryRoom()
+                            Rooms().ScaryRoom().first_level()
                             pygame.display.flip()
 
                             # time.delay(30000)
@@ -193,6 +253,20 @@ class Main:
                             if seconds > 2:
                                 Rooms().DreamsRoom()
                                 pygame.display.flip()
+
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+
+                    print(self.btn_cords_lst[0][0])
+                    print(self.btn_cords_lst[0][1])
+                    print()
+                    print(event.pos[1])
+                    print()
+                    print(event.pos[0] in self.btn_cords_lst[0][0])
+                    print(599 in range(76, 807))
+
+                    if event.pos[0] in self.btn_cords_lst[0][0]:
+                        print('Есть!')
+
         pygame.quit()
 
 
@@ -206,7 +280,7 @@ class Rooms(Main):
         def first_level(self):
             self.screen.fill((0, 0, 0))
 
-            mixer.music.load("Song_1.mp3")
+            mixer.music.load("./Materials/Music/Scary Room/Song_1.mp3")
             mixer.music.play()
 
             time.delay(30000)
@@ -220,7 +294,7 @@ class Rooms(Main):
         def first_level(self):
             self.screen.fill((0, 0, 0))
 
-            mixer.music.load("Song_1.mp3")
+            mixer.music.load("./Materials/Music/Christmas Room/Song_1.mp3")
             mixer.music.play()
 
             time.delay(30000)
@@ -234,12 +308,13 @@ class Rooms(Main):
         def first_level(self):
             self.screen.fill((0, 0, 0))
 
-            mixer.music.load("Song_1.mp3")
+            mixer.music.load("./Materials/Music/Dreams Room/Song_1.mp3")
             mixer.music.play()
 
             time.delay(30000)
 
     def main(self):
+
         active = True
         while active:
 
