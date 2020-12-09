@@ -139,8 +139,9 @@ class Main:
 
                             time.delay(2000)
 
-                            Level().first_level()
+                            Rooms().ScaryRoom()
                             pygame.display.flip()
+
                             # time.delay(30000)
 
                     elif event.key == pygame.K_2:
@@ -166,7 +167,7 @@ class Main:
 
                             seconds = (time.get_ticks() - start_ticks) / 1000  # calculate how many seconds
                             if seconds > 2:
-                                Level().second_level()
+                                Rooms().ChristmasRoom()
                                 pygame.display.flip()
 
                     elif event.key == pygame.K_3:
@@ -190,13 +191,14 @@ class Main:
 
                             seconds = (time.get_ticks() - start_ticks) / 1000  # calculate how many seconds
                             if seconds > 2:
-                                Level().third_level()
+                                Rooms().DreamsRoom()
                                 pygame.display.flip()
         pygame.quit()
 
 
 class Rooms(Main):
     class ScaryRoom(Main):
+
         def __init__(self):
             super().__init__()
             print('hi')
@@ -210,6 +212,7 @@ class Rooms(Main):
             time.delay(30000)
 
     class ChristmasRoom(Main):
+
         def __init__(self):
             super().__init__()
             print('hi')
@@ -223,6 +226,7 @@ class Rooms(Main):
             time.delay(30000)
 
     class DreamsRoom(Main):
+
         def __init__(self):
             super().__init__()
             print('hi')
