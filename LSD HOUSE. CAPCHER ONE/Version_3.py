@@ -195,37 +195,45 @@ class Main:
         pygame.quit()
 
 
-class Level(Main):
+class Rooms(Main):
+    class ScaryRoom(Main):
+        def __init__(self):
+            super().__init__()
+            print('hi')
 
-    def __init__(self):
-        super().__init__()
+        def first_level(self):
+            self.screen.fill((0, 0, 0))
 
-        self.x_pos = 100
-        self.y_pos = 600
+            mixer.music.load("Song_1.mp3")
+            mixer.music.play()
 
-    def first_level(self):
+            time.delay(30000)
 
-        self.screen.fill((0, 0, 0))
+    class ChristmasRoom(Main):
+        def __init__(self):
+            super().__init__()
+            print('hi')
 
-        print("Hi, it's first level function")
-        mixer.music.load("Song_1.mp3")
-        mixer.music.play()
+        def first_level(self):
+            self.screen.fill((0, 0, 0))
 
-        time.delay(30000)
+            mixer.music.load("Song_1.mp3")
+            mixer.music.play()
 
-    def second_level(self):
+            time.delay(30000)
 
-        self.screen.fill((0, 0, 0))
+    class DreamsRoom(Main):
+        def __init__(self):
+            super().__init__()
+            print('hi')
 
-        pygame.draw.line(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
-                         (0, 750), (800, 750), 3)
+        def first_level(self):
+            self.screen.fill((0, 0, 0))
 
-    def third_level(self):
+            mixer.music.load("Song_1.mp3")
+            mixer.music.play()
 
-        self.screen.fill((0, 0, 0))
-
-        pygame.draw.line(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
-                         (0, 750), (800, 750), 3)
+            time.delay(30000)
 
     def main(self):
         active = True
