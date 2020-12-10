@@ -259,13 +259,35 @@ class Main:
                     print(self.btn_cords_lst[0][0])
                     print(self.btn_cords_lst[0][1])
                     print()
-                    print(event.pos[1])
+                    print(event.pos[0])
                     print()
-                    print(event.pos[0] in self.btn_cords_lst[0][0])
+                    print(event.pos[1] in self.btn_cords_lst[0][0])
                     print(599 in range(76, 807))
 
-                    if event.pos[0] in self.btn_cords_lst[0][0]:
-                        print('Есть!')
+                    if event.pos[1] in self.btn_cords_lst[0][0]:
+
+                        lsd_1_active = True
+
+                        while lsd_1_active:
+
+                            for event_2 in pygame.event.get():
+                                if event_2.type == pygame.QUIT:
+                                    lsd_1_active = False
+
+                                    # Вызов отрисовки 1-й комнаты
+
+                                    self.lsd_room_1()
+                                    self.clock.tick(self.fps)
+                                    pygame.display.flip()
+
+                                    # Вызов отрисовки 1-ого уровня
+
+                                    time.delay(2000)
+
+                                    Rooms().ScaryRoom().first_level()
+                                    pygame.display.flip()
+
+                                    # time.delay(30000)
 
         pygame.quit()
 
