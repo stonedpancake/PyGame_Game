@@ -1,4 +1,5 @@
 import pygame
+import pygame_gui
 from pygame import camera, image, time
 from random import choice
 from pygame import mixer, draw
