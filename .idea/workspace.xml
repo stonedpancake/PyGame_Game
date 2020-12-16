@@ -20,24 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3218e9dd-9b08-4607-b2ad-d28d92f1874f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SWEET HOUSE/Version_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Game.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/4c6677f398ff59f2894296279d3f07c2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/67915641.6v6sp4kkya.W665.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/christmas-new-year-gift-fireplace.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/depositphotos_4274707-stock-photo-little-house-in-the-woods.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/fair-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/kak-ukrasit-yelku-i-dom-na-novyy-god-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/novogodnee-nastroenie-novyj-god.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/novogodnie-ulichnye-girlyandy-vybor-ustanovka-i-izgotovlenie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/scale_1200.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Christmass Room/гум kudago com.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Text_Fonts/~WRL1976.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Version_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEET HOUSE/Version_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Applications/Song_1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Version_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEET HOUSE/Version_4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kgaATthFCYBB207cO9dhmCcZwK" />
@@ -80,8 +69,8 @@
       <recent name="C:\Programming\Python\Game\Материалы" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Version_3 (1)">
-    <configuration name="Test_App_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Version_4">
+    <configuration name="Version_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Game" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -89,32 +78,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test Applications" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEET HOUSE" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test Applications/Test_App_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Version_1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Game" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LSD HOUSE. CAPCHER ONE" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LSD HOUSE. CAPCHER ONE/Version_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEET HOUSE/Version_1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,6 +146,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LSD HOUSE. CAPCHER ONE/Version_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Version_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Game" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SWEET HOUSE" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SWEET HOUSE/Version_4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -252,11 +241,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Version_4" />
+        <item itemvalue="Python.Version_1" />
         <item itemvalue="Python.Version_3 (1)" />
         <item itemvalue="Python.Version_3" />
         <item itemvalue="Python.Version_2" />
-        <item itemvalue="Python.Test_App_2" />
-        <item itemvalue="Python.Version_1 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -384,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607589638982</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="13 commit">
+      <created>1608149124626</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608149124626</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +408,8 @@
     <MESSAGE value="10 commit" />
     <MESSAGE value="11 commit" />
     <MESSAGE value="12 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="12 commit" />
+    <MESSAGE value="13 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="13 commit" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
