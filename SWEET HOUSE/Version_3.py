@@ -1,7 +1,7 @@
 import pygame
 from pygame import camera, image, time
 from random import choice
-from pygame import mixer
+from pygame import mixer, draw
 
 '''./Materials'''
 
@@ -25,7 +25,7 @@ class Main:
         self.screen = pygame.display.set_mode(self.size)
         self.fps = 6
         self.clock = pygame.time.Clock()
-        self.image = image.load("./Materials/Bg pictures/Scary Room/4-19.jpg")
+        self.image = image.load("./Materials/Bg Pictures/Christmas Room/christmas-new-year-gift-fireplace.jpg")
 
         self.btn_cords_lst = []
 
@@ -60,7 +60,9 @@ class Main:
         text_h = text.get_height()
         self.screen.blit(text, (text_x, text_y + text_h))
 
-        self.btn_cords_lst.append([range(text_h + 20, text_x - 10), range(text_h + 20, text_y + text_h - 8)])
+        # self.btn_cords_lst.append([range(text_h + 20, text_x - 10), range(text_h + 20, text_y + text_h - 8)])
+
+        self.btn_cords_lst.append([text_h + 20, text_x - 10, text_h + 20, text_y + text_h - 8])
 
         '''pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
                          (text_x_main - 10, text_y + text_h - 8, text_w_main + 20, text_h + 20), 1)'''
@@ -119,7 +121,8 @@ class Main:
 
         pygame.draw.rect(self.screen, (choice(range(255)), choice(range(255)), choice(range(255))),
                          (text_x - 10, text_y - 60, text_w + 20, text_h + 20), 1)
-        self.clock.tick(15)
+
+        # self.clock.tick(15)
         # Level().main()
 
     def lsd_room_2(self):
@@ -197,7 +200,7 @@ class Main:
 
                             # Вызов отрисовки 1-ого уровня
 
-                            time.delay(2000)
+                            # time.delay(2000)
 
                             Rooms().ScaryRoom().first_level()
                             pygame.display.flip()
@@ -256,38 +259,31 @@ class Main:
 
                 elif event.type == pygame.MOUSEBUTTONDOWN:
 
-                    print(self.btn_cords_lst[0][0])
-                    print(self.btn_cords_lst[0][1])
-                    print()
-                    print(event.pos[0])
-                    print()
-                    print(event.pos[1] in self.btn_cords_lst[0][0])
-                    print(599 in range(76, 807))
-
-                    if event.pos[1] in self.btn_cords_lst[0][0]:
+                    """if event.pos[1]:
 
                         lsd_1_active = True
 
                         while lsd_1_active:
 
                             for event_2 in pygame.event.get():
+
                                 if event_2.type == pygame.QUIT:
                                     lsd_1_active = False
 
-                                    # Вызов отрисовки 1-й комнаты
+                                # Вызов отрисовки 1-й комнаты
 
-                                    self.lsd_room_1()
-                                    self.clock.tick(self.fps)
-                                    pygame.display.flip()
+                                self.lsd_room_1()
+                                self.clock.tick(self.fps)
+                                pygame.display.flip()
 
-                                    # Вызов отрисовки 1-ого уровня
+                                # Вызов отрисовки 1-ого уровня
 
-                                    time.delay(2000)
+                                '''time.delay(2000)
 
-                                    Rooms().ScaryRoom().first_level()
-                                    pygame.display.flip()
+                                Rooms().ScaryRoom().first_level()
+                                pygame.display.flip()'''
 
-                                    # time.delay(30000)
+                                # time.delay(30000)"""
 
         pygame.quit()
 
@@ -300,12 +296,12 @@ class Rooms(Main):
             print('hi')
 
         def first_level(self):
-            self.screen.fill((0, 0, 0))
+            self.screen.blit(self.image, (0, 0))
 
-            mixer.music.load("./Materials/Music/Scary Room/Song_1.mp3")
+            '''mixer.music.load("./Materials/Music/Scary Room/Song_1.mp3")
             mixer.music.play()
 
-            time.delay(30000)
+            time.delay(30000)'''
 
     class ChristmasRoom(Main):
 
