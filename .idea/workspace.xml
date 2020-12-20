@@ -19,15 +19,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3218e9dd-9b08-4607-b2ad-d28d92f1874f" name="Default Changelist" comment="14 commit">
-      <change afterPath="$PROJECT_DIR$/SWEET HOUSE/Materials/System/imports.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWEET HOUSE/Version_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWEET HOUSE/Version_6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SWEET HOUSE/imports.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3218e9dd-9b08-4607-b2ad-d28d92f1874f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Version_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEET HOUSE/Version_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Dreams Room/1.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Dreams Room/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Dreams Room/rabstol_net_castle_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Dreams Room/skazka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Dreams Room/tmb_170268_4095.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Dreams Room/tsvetnaya-skazka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Scary Room/143636-noch-krasnyj_cvet-nebo-svet-voda-1920x1080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Scary Room/4-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Scary Room/luxfon.com-16375.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Scary Room/unnamed (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/Scary Room/unnamed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/bsod_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/erro.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Bg Pictures/spaceship.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Music/Scary Room/13cfa61d27ba378.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Music/Scary Room/9a49e1c170bd8c1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Music/Scary Room/Song_1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Music/Scary Room/f3a31bfbb742006.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/System/imports.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Text_Fonts/BAUHS93.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Materials/Text_Fonts/Sweet House - описание, идеи..docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/Version_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/SWEET HOUSE/Version_5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SWEET HOUSE/imports.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,11 +86,11 @@
       <recent name="C:\Programming\Python\Game\Материалы" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\Projects\Python\Sweet House\SWEET HOUSE\Materials" />
       <recent name="C:\Programming\Projects\Python\Sweet House\SWEET HOUSE" />
       <recent name="C:\Programming\Python\Game\SWEET HOUSE\Materials\Text_Fonts" />
       <recent name="C:\Programming\Python\Game\LSD HOUSE. CAPCHER ONE" />
       <recent name="C:\Programming\Python\Game" />
-      <recent name="C:\Programming\Python\Game\Материалы" />
     </key>
   </component>
   <component name="RunManager" selected="Python.Version_5">
@@ -387,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608157588682</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="14 commit">
+      <created>1608505390215</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608505390215</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
