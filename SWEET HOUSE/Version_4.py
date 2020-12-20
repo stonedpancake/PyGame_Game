@@ -11,16 +11,18 @@ class Main:
 
         init()
         display.set_caption('Sweet House')
-        self.size = self.width, self.height = 600, 550
+        self.size = self.width, self.height = 1920, 1080
 
         self.menu_color = '#48C9B0'
         self.chr_btn_color = '#E67E22'
         self.scr_btn_color = '#ED5252'
         self.drm_btn_color = '#EC77E0'
 
+        self.menu = image.load('./Materials/Bg Pictures/image.png')
+
         # self.screen = Surface(self.size)
         self.screen = display.set_mode(self.size)
-        self.screen.fill(self.menu_color)
+        self.screen.blit(self.menu, (0, 0))
         self.manager = UIManager(self.size)
 
         self.fps = 60
@@ -28,7 +30,7 @@ class Main:
 
         # Set buttons
 
-        self.christmas_main_btn = elements.UIButton(
+        '''self.christmas_main_btn = elements.UIButton(
             relative_rect=Rect((200, 25), (200, 100)),
             text='Christmas',
             manager=self.manager
@@ -53,7 +55,7 @@ class Main:
         self.scr_btn_sf.fill(self.scr_btn_color)
 
         self.drm_btn_sf = Surface(self.dream_main_btn.get_abs_rect().size)
-        self.drm_btn_sf.fill(self.drm_btn_color)
+        self.drm_btn_sf.fill(self.drm_btn_color)'''
 
     def func(self):
         pass
